@@ -18,7 +18,7 @@ Example
 -
 
 <pre>
-    <div class="flag flag-16 flag-BE"></div>
-    <div class="flag flag-32 flag-BE"></div>
-    <div class="flag flag-64 flag-BE"></div>
+    &lt;div class="flag flag-16 flag-BE"&gt;&lt;/div&gt;
+    &lt;div class="flag flag-32 flag-BE"&gt;&lt;/div&gt;
+    &lt;div class="flag flag-64 flag-BE"&gt;&lt;/div&gt;
 </pre>
