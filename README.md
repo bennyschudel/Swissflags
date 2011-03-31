@@ -13,7 +13,6 @@ Usage
 
 This will create 16px, 32px and 64px version of the images with the flag class name.
 
-
 Example
 -
 
@@ -22,3 +21,9 @@ Example
     &lt;div class="flag flag-32 flag-BE"&gt;&lt;/div&gt;
     &lt;div class="flag flag-64 flag-BE"&gt;&lt;/div&gt;
 </pre>
+
+Optimize
+-
+
+Before using the images in production I suggest to open them in Photoshop and save it for web.
+(cmd + alt + shift + s)
