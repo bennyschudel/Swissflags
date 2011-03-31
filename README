@@ -1,0 +1,9 @@
+# swissflags
+
+The 26 swiss canton flags ready to use in your web project.
+
+The image stripes are directly renderd from svg using imagemagick.
+
+usage: php create.php 16,32,64 flag
+
+This will create 16px, 32px and 64px version of the images with the flag class name.
