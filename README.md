@@ -3,8 +3,6 @@ Swissflags
 
 The 26 swiss canton flags ready to use in your web project.
 
-The image sprites are directly renderd from svg using imagemagick.
-
 Example
 -
 
@@ -18,7 +16,8 @@ Note
 -
 
 The provided create script is not limited to swissflags. You could provide all kind of images
-in the images folder. There are several parameters to adjust the result to your needs.
+in the images folder. There are several parameters to adjust the result to your needs. Thanks
+to imagemagick you could even provide svg files as source images, like I did in the example.
 
 Usage
 -
