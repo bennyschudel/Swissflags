@@ -15,9 +15,11 @@ Example
 Note
 -
 
-The provided create script is not limited to swissflags. You could provide all kind of images
-in the images folder. There are several parameters to adjust the result to your needs. Thanks
-to imagemagick you could even provide svg files as source images, like I did in the example.
+The &laquocreate.php&raquo; script is not limited to swissflags. You could provide all kind of images
+in the images folder (for example SVG files). There are also several parameters to adjust the result to fit your needs.
+
+If you have any questions feel free to contact me anytime.
+// Benny
 
 Usage
 -
@@ -40,4 +42,5 @@ Optimize
 
 Before using the images in production I suggest to open them in Photoshop and save it for web.
 (cmd + alt + shift + s)
+
 
