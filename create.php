@@ -117,7 +117,8 @@ if ($columns === null) {
 	// create image stripes
 foreach ($sizes as $size) {
 	list($size_x, $size_y) = explode('x', $size);
-	$stripe = "{$class_name}-{$size}.{$format}";
+	$prefix = ($size_x !== $size_y) ? $size : $size_x;
+	$stripe = "{$class_name}-{$prefix}.{$format}";
 	$output = shell_exec("montage {$input_dir}* -tile {$columns}x -geometry {$size} -quality 90 {$output_dir}{$stripe}");
 	$stripes[$size] = $stripe;
 }
@@ -131,7 +132,8 @@ $lines[] = ".{$class_name} {
 $lines[] = "";
 foreach ($stripes as $size => $stripe) {
 	list($size_x, $size_y) = explode('x', $size);
-	$lines[] = ".{$class_name}.{$class_name}-{$size} {
+	$prefix = ($size_x !== $size_y) ? $size : $size_x;
+	$lines[] = ".{$class_name}.{$class_name}-{$prefix} {
 	background-image: url({$stripe});
 	width: {$size_x}px;
 	height: {$size_y}px;
@@ -156,7 +158,7 @@ foreach ($sizes as $size) {
 		}
 		$col += 1;
 		$prefix = ($size_x !== $size_y) ? $size : $size_x;
-		$lines[] = ".{$class_name}.{$class_name}-{$prefix}.{$class_name}-{$info['filename']}\t{ background-position: {$pos_x} {$pos_y}; }";
+		$lines[] = ".{$class_name}.{$class_name}-{$prefix}.{$class_name}-{$info['filename']} { background-position: {$pos_x} {$pos_y}; }";
 	}
 	$lines[] = "";
 }
