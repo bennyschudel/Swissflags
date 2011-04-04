@@ -94,10 +94,10 @@ $columns = getOption($opt, 'columns', '!^[\d]+$!', $columns);
 $class_name = getOption($opt, 'class-name', '!^[\w\-_]+$!', $class_name);
 $format = strtolower(getOption($opt, 'format', '!^(jpg|png|gif)$!i', $format));
 		// convert single sizes to ..x..
-foreach ($sizes as &$size) {
+foreach ($sizes as $key => $size) {
 	@list($size_x, $size_y) = explode('x', $size);
 	if ($size_y === null) {
-		$size = implode('x', array($size_x, $size_x));
+		$sizes[$key] = implode('x', array($size_x, $size_x));
 	}
 }
 
